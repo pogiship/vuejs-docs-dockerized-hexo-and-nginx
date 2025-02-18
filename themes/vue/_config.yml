@@ -1,14 +1,8 @@
 site_description: Vue.js - The Progressive JavaScript Framework
 google_analytics: UA-46852172-1
 root_domain: vuejs.org
-vue_version: 2.7.14
+vue_version: 2.7.16
 # START SPONSORS
-special:
-  - name: appwrite
-    url: https://appwrite.io
-    img: appwrite.svg
-    description: Open-source backend cloud platform
-    priority: true
 platinum:
   - name: Bit
     url: https://bit.dev
@@ -30,38 +24,26 @@ platinum:
   - name: Storyblok
     url: https://www.storyblok.com
     img: storyblok.png
-  - name: Ionic
-    url: >-
-      https://ionicframework.com/vue?utm_source=partner&utm_medium=referral&utm_campaign=vuesponsorship&utm_content=vuedocs
-    img: ionic.png?v2
-  - name: Skilled
-    url: https://skilled.yashio-corp.com
-    img: skilled.svg
   - name: Chrome Frameworks Fund
     url: https://opencollective.com/2021-frameworks-fund
     img: chrome_frameworks_fund.png
   - name: HeroDevs
     url: https://www.herodevs.com/support/vue
     img: herodevs.png
+  - name: JavaScript Certification
+    url: https://certificates.dev/javascript/?ref=vuejs-sponsor&friend=VUEJS
+    img: javascript_certification.png?v2
+    description: Certification of competence for the JavaScript language
 gold:
-  - name: Laravel
-    url: https://laravel.com
-    img: laravel.png
   - name: Tidelift
     url: https://tidelift.com/subscription/npm/vue
     img: tidelift.png
-  - name: Intygrate
-    url: https://intygrate.com/
-    img: intygrate.png
-  - name: Y8
-    url: https://www.y8.com/
-    img: y8.png
+  - name: Laravel
+    url: https://laravel.com/
+    img: laravel.png
   - name: DevExpress
     url: https://js.devexpress.com/
     img: devexpress.png
-  - name: FASTCODING Inc
-    url: 'https://fastcoding.jp/javascript/ '
-    img: fastcoding_inc.svg
   - name: LY Corporation
     url: https://www.lycorp.co.jp/en/
     img: ly_corporation.png?v2
@@ -78,30 +60,15 @@ gold:
     url: >-
       https://localazy.com/blog/how-to-localize-vuejs-app-with-vue-i18n-and-localazy?utm_source=vuejs&utm_medium=banner&utm_campaign=sponsorships_vuejs&utm_content=logo
     img: localazy.svg
-  - name: Casinoburst.com
-    url: https://casinoburst.com/casino-utan-licens/
-    img: casinoburst_com.png
-  - name: 'Enkrypt: Ethereum and Polkadot Web3 Wallet'
-    url: https://www.enkrypt.com
-    img: enkrypt__ethereum_and_polkadot_web3_wallet.svg
   - name: uudetkasinot.com
     url: https://www.uudetkasinot.com
     img: uudetkasinot_com.png
   - name: Fathom Analytics
     url: https://usefathom.com/
     img: fathom_analytics.svg
-  - name: Goread.io
-    url: https://goread.io/buy-instagram-followers
-    img: goread_io.png
   - name: Sentry
     url: https://sentry.io/for/vue?utm_source=vuejs.org&utm_medium=paid-community
     img: sentry.png
-  - name: Poprey.com
-    url: https://poprey.com/
-    img: poprey_com.png
-  - name: Ilmaiset Pitkävetovihjeet
-    url: https://www.vedonlyontibonukset.com/pitkavetovihjeet
-    img: ilmaiset_pitk_vetovihjeet.png
   - name: Famoid
     url: https://famoid.com/
     img: famoid.png
@@ -114,35 +81,67 @@ gold:
   - name: TBDC - Agro Software
     url: http://tbdc.com.br/
     img: tbdc___agro_software.svg
-  - name: FineProxy
-    url: https://fineproxy.org/
-    img: fineproxy.svg
-  - name: Daniel
-    url: >-
-      https://rxdb.info/?utm_source=sponsor&utm_medium=opencollective&utm_campaign=opencollective-vuejs
-    img: daniel.png
-  - name: SurveyJS
-    url: https://surveyjs.io/
-    img: surveyjs.png?v2
+  - name: Quickbooks Tool Hub
+    url: https://qbtoolhub.com/
+    img: quickbooks_tool_hub.png
+  - name: it@M
+    url: ' https://opensource.muenchen.de/software/vue.js.html'
+    img: it_m.png
+  - name: Blastup
+    url: https://blastup.com/buy-instagram-likes
+    img: blastup.png
+  - name: VueJobs
+    url: https://vuejobs.com/?utm_source=vuejs.com&utm_campaign=sponsor
+    img: vuejobs.png
+  - name: Huly
+    url: https://huly.io
+    img: huly.svg
+  - name: Automatenspieler
+    url: https://automatenspieler.net/
+    img: automatenspieler.png?v2
   - name: Stormlikes
-    url: https://www.stormlikes.net/buy-instagram-followers
+    url: https://stormlikes.com
     img: stormlikes.png
+  - name: Superviral
+    url: https://superviral.io/
+    img: superviral.png
+  - name: Goread.io
+    url: https://goread.io/buy-instagram-followers
+    img: goread_io.png
+  - name: Celebian
+    url: https://celebian.com/buy-tiktok-followers
+    img: celebian.png
+  - name: Skweezer.net
+    url: https://skweezer.net/
+    img: skweezer_net.png
+  - name: casinorevisor.com
+    url: https://casinorevisor.com/
+    img: casinorevisor_com.png
+  - name: Famety - Buy Instagram Followers
+    url: https://www.famety.com/
+    img: famety___buy_instagram_followers.png
+  - name: LambdaTest
+    url: https://lambdatest.com/
+    img: lambdatest.svg
+  - name: Jspreadsheet
+    url: https://jspreadsheet.com/
+    img: jspreadsheet.png
+  - name: Buy Youtube Subscribers
+    url: https://ssmarket.net/buy-youtube-subscribers
+    img: buy_youtube_subscribers.png
+  - name: Leofame
+    url: https://leofame.com/buy-instagram-followers
+    img: leofame.png
+  - name: SocialBoosting.com
+    url: https://www.socialboosting.com/buy-tiktok-followers
+    img: socialboosting_com.png
+  - name: Poprey - Buy Instagram Likes
+    url: https://poprey.com/
+    img: poprey___buy_instagram_likes.png
 silver:
-  - name: Draxlr
-    url: https://www.draxlr.com
-    img: draxlr.svg
-  - name: Team Extension North America Inc
-    url: https://teamextension.io
-    img: team_extension_north_america_inc.png
-  - name: Free Bets US
-    url: https://freebets.us
-    img: free_bets_us.png
   - name: Doximity
     url: https://technology.doximity.com/
     img: doximity.png
-  - name: Interflora Group
-    url: https://www.interflora.fr
-    img: interflora_group.png
   - name: Codesmith
     url: https://codesmith.io
     img: codesmith.png
@@ -161,19 +160,24 @@ silver:
   - name: Social Followers
     url: https://www.socialfollowers.uk/buy-tiktok-followers/
     img: social_followers.png
-  - name: Nettcasino
-    url: https://www.nettcasino.com/
-    img: nettcasino.png
-  - name: Spelpressen
-    url: https://spelpressen.se/
-    img: spelpressen.png
-  - name: Casino Utan Svensk Licens
-    url: https://casino-utan-svensk-licens.com/
-    img: casino_utan_svensk_licens.png
-  - name: Outlook India
-    url: >-
-      https://www.outlookindia.com/outlook-spotlight/casinos-not-on-gamstop-uk-news-302214/
-    img: outlook_india.png
+  - name: Route Planner and Route Optimizer - Route4Me
+    url: https://route4me.com
+    img: route_planner_and_route_optimizer___route4me.png
+  - name: Buy Instagram Followers Media Mister
+    url: https://www.mediamister.com/buy-instagram-followers
+    img: buy_instagram_followers_media_mister.png
+  - name: https://nongamstopcasinos.net/en/
+    url: https://nongamstopcasinos.net/en/
+    img: https___nongamstopcasinos_net_en_.png
+  - name: Playfortuneforfun.com
+    url: https://playfortuneforfun.com/
+    img: playfortuneforfun_com.png
+  - name: Gamblechief.com
+    url: https://gamblechief.com/
+    img: gamblechief_com.png
+  - name: Betwinner Partner
+    url: https://betwinnerpartner.com/
+    img: betwinner_partner.png
 bronze:
   - name: Derek Pollard
     url: https://polyglotengineer.com/derek.pollard
@@ -184,33 +188,23 @@ bronze:
   - name: RStudio
     url: https://rstudio.com
     img: rstudio.png
-  - name: Darkhorse Analytics
-    url: https://www.darkhorseanalytics.com/
-    img: darkhorse_analytics.png
   - name: vuejs.de - German Vue Community
     url: https://vuejs.de
     img: vuejs_de___german_vue_community.svg
   - name: Liip AG
     url: https://www.liip.ch/en
     img: liip_ag.png
-  - name: Bürkert Werke GmbH & Co KG
-    url: https://www.burkert.com
-    img: b_rkert_werke_gmbh___co_kg.png
   - name: codefortynine
     url: https://codefortynine.com
     img: codefortynine.png
-  - name: Arcanite
-    url: https://arcanite.ch
-    img: arcanite.png
+  - name: Routr
+    url: http://www.routr.com
+    img: routr.png
 platinum_china:
   - name: CRMEB
     url: http://github.crmeb.net/u/vue
     img: crmeb.svg?v2
     description: 开源电商系统
-  - name: MISBoot
-    url: https://vue.misboot.com/#/user/Login?from=vuejs
-    img: misboot.png?v3
-    description: 低代码开发平台
 # END SPONSORS
 redirects:
   '/v2/api/index.html': '/api/'
