@@ -1,129 +1,93 @@
-﻿# v2.vuejs.org
+# VueJS Docs Dockerized with Hexo and Nginx
 
-> Important: This repository is for Vue 1.x and 2.x only. Issues and pull requests related to 3.x are managed in the [v3 doc repo](https://github.com/vuejs/docs-next).
+## Introduction
+This project provides a **dockerized version of the VueJS documentation site**, using **Hexo** as a static site generator and **NGINX** as a production web server. The setup includes a development environment where you can preview changes live and a production-like environment serving pre-built static files.
 
-This site is built with [hexo](http://hexo.io/). Site content is written in Markdown format located in `src`. Pull requests welcome!
+## Quick Start
+Follow these steps to set up and run the project on your machine. 
 
-## Writing
+If you already have the setup script, you can skip the cloning (first) step.
 
-See the [Vue Docs Writing Guide](https://github.com/vuejs/v2.vuejs.org/blob/master/writing-guide.md) for our rules and recommendations on writing and maintaining documentation.
-
-## Developing
-
-``` bash
-$ npm install
-$ npm start # dev server at http://localhost:4000
+### **1. Clone the Repository**
+```sh
+git clone https://github.com/pogiship/vuejs-docs-dockerized-hexo-and-nginx.git
+cd vuejs-docs-dockerized-hexo-and-nginx
 ```
 
-## Deploying
+### **2. Run the Setup Script**
+Make the script executable and run it:
 
-The site is automatically deployed when commits land in `master`, via [Netlify](https://www.netlify.com/).
+```sh
+chmod +x ./setup.sh
+./setup.sh
+```
 
-If you are the maintainer of a community translation fork and would like to deploy via Netlify instead of GitHub pages, please ping @yyx990803 in an issue to request a Netlify team membership and DNS update.
+**Note:** This script can run independently or after cloning repository.
 
-## On Translations
+This script will install the necessary dependencies, build the project, and start the Docker containers.
 
-Translations for this documentation project are currently maintained in separate repositories forked from this original one.
+### **3. Access the Development Server**
+Once the script completes, the **development server** will be available at:
+```sh
+http://localhost:4000
+```
+This server allows you to see live changes while working on the documentation.
 
-### Arabic
+### **4. Restart Containers to Apply Changes in Development Server**
+If you make any modifications and need to restart the containers, run:
+```sh
+docker compose down
+docker compose up
+```
+This ensures that changes take effect in the development environment.
 
-Arabic translation is maintained by [Interstellar Club](https://github.com/InterstellarClub)
+### **5. Access the Production-Like Nginx Server**
+The **NGINX web server** will be running at:
+```sh
+http://localhost
+or
+http://localhost:80
+```
+This serves the **pre-built static HTML files**, making it closer to a production environment.
 
-* Translation Repo - [/interstellarClub/ar.vuejs.org](https://github.com/interstellarClub/ar.vuejs.org)
-* Primary Maintainers :
-    * [Ilyes Chouia](https://github.com/celyes)
-    * [Ahmed Aissaoui](https://github.com/Aissaoui-Ahmed)
+### **6. Rebuilding Static HTML Files to Apply Changes in Web Server**
 
-### French
-
-French translation is maintained by Vuejs-FR.
-* Translation Repo - [/vuejs-fr/vuejs.org](https://github.com/vuejs-fr/vuejs.org)
-
-### Italian
-
-* Translation Repo - [/vuejs/it.vuejs.org](https://github.com/vuejs/it.vuejs.org)
-
-### Japanese
-
-Japanese translation is maintained by [Vue.js japan user group](https://github.com/vuejs-jp)
-
-* Translation Repo - [/vuejs/jp.vuejs.org](https://github.com/vuejs/jp.vuejs.org)
-* Primary maintainer - [kazupon](https://github.com/kazupon)
-* Secondary Maintainers:
-    * [re-fort](https://github.com/re-fort)
-    * [potato4d](https://github.com/potato4d)
-    * [oohira](https://github.com/oohira)
-
-### Korean
-
-Korean translation is maintained by [Vue.js Korean User group](https://github.com/vuejs-kr).
-
-* Translation Repo - [/vuejs-kr/kr.vuejs.org](https://github.com/vuejs-kr/kr.vuejs.org)
-* Primary maintainer - [ChangJoo Park](https://github.com/ChangJoo-Park)
-
-### Mandarin
-
-* Translation Repo - [/vuejs/cn.vuejs.org](https://github.com/vuejs/cn.vuejs.org)
-
-### Persian (Farsi)
-
-Persian translation is maintained by VueJS-fa.
-
-* Translation Repo - [/vuejs-fa/fa.vuejs.org](https://github.com/vuejs-fa/fa.vuejs.org)
-* Primary maintainer - [Pooya Parsa](https://github.com/pi0)
-
-### Português-Br
-
-Português-Br translation is maintained by [Vuejs-Br](https://github.com/vuejs-br).
-
-* Translation Repo - [/vuejs-br/br.vuejs.org](https://github.com/vuejs-br/br.vuejs.org)
-
-### Russian
-
-Russian translation is maintained by Translation Gang.
-
-* Translation Repo - [/translation-gang/ru.vuejs.org](https://github.com/translation-gang/ru.vuejs.org)
-* Primary maintainer - [Grigoriy Beziuk](https://gbezyuk.github.io)
-
-### Spanish
-
-* Translation Repo - [/1950Labs/vuejs.org](https://github.com/1950Labs/vuejs.org)
-* Spanish translation is maintained by:
-
-[1950Labs](https://1950labs.com) & [Vue.js Montevideo](https://www.meetup.com/Montevideo-Vue-JS-Meetup/):
-
-- [Leonel More](https://github.com/leonelmore) | [Twitter](https://twitter.com/leonelmore)
-- [Sebastián Camacho](https://github.com/sxcamacho) | [Twitter](https://twitter.com/sxcamacho)
-- [Diana Rodríguez](https://github.com/alphacentauri82) | [Twitter](https://twitter.com/cotufa82)
-- [Alejandro Parada](https://github.com/alejandro8605)
-- [José Javier Señaris](https://github.com/pepesenaris) | [Twitter](https://twitter.com/pepesenaris)
-- [Federico Kauffman](https://github.com/fedekau) | [Twitter](https://twitter.com/fedekauffman)
-- [Fabián Larrañaga](https://github.com/FLarra) | [Twitter](https://twitter.com/FLarraa)
-- [Pablo Marcano](https://github.com/Pablosky12) | [Twitter](https://twitter.com/stiv_ml)
-- [Nicolás Tinte](https://github.com/Tintef) | [Twitter](https://twitter.com/NicoTinte)
-- [Diego Barreiro](https://github.com/faliure)
-- [Matías Verdier](https://github.com/MatiasVerdier) | [Twitter](https://twitter.com/matiasvj)
-- [Pablo Kz](https://github.com/pabloKz)
-- [Leonardo Fagundez](https://github.com/lfgdzdev) | [Twitter](https://twitter.com/Lfgdz)
+If you make any modifications and need to rebuild the static HTML files, run:
+```sh
+npm run build
+```
+This ensures that static HTML files are going to rebuild by Hexo and updated in web server.
 
 
-### Vietnamese
+## Detailed Explanation of the Project
 
-Vietnamese translation is maintained by [Vue.js Vietnam User group](https://github.com/vuejs-vn/).
+### **Development Environment**
+- The development server (`localhost:4000`) is powered by **Hexo**, allowing real-time previews of documentation updates.
+- It is intended for making changes and testing content before deploying it to production.
 
-* Translation Repo: [/vuejs-vn/vuejs.org](https://github.com/vuejs-vn/vuejs.org)
-* Primary maintainer - [phanan](https://github.com/phanan)
+### **Production-Like Environment**
+- The NGINX server (`localhost:80` or `localhost`) serves **pre-built static HTML files** generated by Hexo.
+- To apply updates to this environment, the static site must be rebuilt using:
+```sh
+npm run build
+```
+- This regenerates the static files in the `.public/` directory, which NGINX then serves.
+- The production environment does not auto-refresh changes; they must be manually built and deployed.
 
-### Bahasa Indonesia
+## Notes
+- The `setup.sh` script handles all necessary installations, so no manual setup is required.
+- If you encounter permission issues with Docker, try logging out and back in or running:
+```sh
+newgrp docker
+```
+- The default ports are:
+  - `4000` → Development server (Hexo live preview)
+  - `80` → Production-like server (NGINX serving static files)
 
-Bahasa Indonesia translation is maintained by [Vue.js Indonesia](https://github.com/vuejs-id/).
+## Contributing
+Feel free to open an issue or pull request if you find a bug or want to improve the documentation!
 
-* Translation Repo: [/vuejs-id/docs](https://github.com/vuejs-id/docs)
+---
 
-### Want to help with the translation?
+This `README.md` provides clear guidance for developers to quickly understand and use the project. Let me know if you'd like any modifications!
 
-If you feel okay with translating quite alone, you can fork the repo, post a comment on the [Community Translation Announcements](https://github.com/vuejs/v2.vuejs.org/issues/2015) issue page to inform others that you're doing the translation and go for it.
-
-If you are more of a team player, Translation Gang might be for you. Let us know somehow that you're ready to join this international open-source translators community. Feel free to contact [Grigoriy Beziuk](https://gbezyuk.github.io) or anybody else from [the team](https://github.com/orgs/translation-gang/people).
-
-And thank you in advance ;)
