@@ -1,7 +1,9 @@
 ﻿# VueJS Docs Dockerized with Hexo and Nginx
 
 ## Introduction
-This project provides a **dockerized version of the VueJS documentation site**, using **Hexo** as a static site generator and **NGINX** as a production web server. The setup includes a development environment where you can preview changes live and a production-like environment serving pre-built static files.
+This project provides a **dockerized version of the VueJS documentation site**, using **Hexo** as a static site generator and **NGINX** as a production web server. The setup includes a development environment where you can preview changes live and a production-like environment serving pre-built static files. 
+
+You can view the overall interaction of system components visually by opening the vuejs-docs-docker.drawio file located in the root directory.
 
 ## Quick Start
 Follow these steps to set up and run the project on your machine. 
