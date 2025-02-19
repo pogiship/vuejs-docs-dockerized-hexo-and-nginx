@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Step 1: Install Git, curl and other dependencies
+# Step 1: Install Git, curl , wget and openssl
 
 if ! command -v git &> /dev/null; then
     echo "Git is not installed. Installing Git..."
@@ -21,6 +21,14 @@ if ! command -v wget &> /dev/null; then
     echo "wget is not installed. Installing wget..."
     sudo apt-get install -y wget
     echo "wget installed successfully."
+fi
+
+if ! command -v openssl &> /dev/null; then
+    echo "OpenSSL is not installed. Installing OpenSSL..."
+    sudo apt-get install -y openssl
+    echo "OpenSSL installed successfully."
+else
+    echo "OpenSSL is already installed."
 fi
 
 
@@ -112,9 +120,32 @@ else
     echo "Error: Build process failed!"
     exit 1
 fi
+############################################################################################################
+
+# Step 7: Generate self-signed SSL certificate if not exists
+
+if [ ! -d "ssl" ]; then
+    mkdir -p ssl
+fi
+
+cd ssl || { echo "Error: Failed to change directory to ssl"; exit 1; }
+
+if [ ! -f "cert.pem" ] || [ ! -f "key.pem" ]; then
+    echo "Generating self-signed SSL certificate..."
+    openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes -subj "/CN=localhost"
+    chmod 600 cert.pem key.pem  # Ensure permissions are correct
+    echo "Self-signed SSL certificate generated."
+else
+    echo "SSL certificate already exists, skipping generation."
+fi
+
+echo "Certificates are stored in: $(pwd)"
+cd ..
+
 
 ############################################################################################################
-# Step 7: Build and start the Docker containers
+
+# Step 8: Build and start the Docker containers
 
 echo "Starting Docker containers..."
 if docker compose up -d; then
@@ -126,7 +157,7 @@ fi
 
 
 
-# Step 8: Verify the setup
+# Step 9: Verify the setup
 
 echo "Verifying the setup..."
 
