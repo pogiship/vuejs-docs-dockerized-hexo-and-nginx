@@ -70,22 +70,28 @@ fi
 # Step 5: Clone the repository (if not already cloned)
 
 REPO_DIR="vuejs-docs-dockerized-hexo-and-nginx"  
-if [ ! -d "$REPO_DIR" ]; then
-    echo "Cloning the repository..."
-    
-    if git clone https://github.com/pogiship/vuejs-docs-dockerized-hexo-and-nginx.git $REPO_DIR; then
-        echo "Repository cloned successfully."
-    else 
-        echo "Error: Failed to clone the repository. Check your internet connection or repo URL."
-        exit 1
+
+if [ "${PWD##*/}" == "$REPO_DIR" ]; then
+    echo "Running inside the repository."
+else    
+    if [ ! -d "$REPO_DIR" ]; then
+        echo "Cloning the repository..."
+        
+        if git clone https://github.com/pogiship/vuejs-docs-dockerized-hexo-and-nginx.git $REPO_DIR; then
+            echo "Repository cloned successfully."
+        else 
+            echo "Error: Failed to clone the repository. Check your internet connection or repo URL."
+            exit 1
+        fi
+    else
+        echo "Repository already exists."
     fi
-else
-    echo "Repository already exists."
+
+    cd $REPO_DIR || { echo "Error: Failed to change directory to $REPO_DIR"; exit 1; }
 fi
 
 # step 6: npm install ve npm run build
 
-cd $REPO_DIR || { echo "Error: Failed to change directory to $REPO_DIR"; exit 1; }
 
 #  Install project dependencies
 
